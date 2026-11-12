@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentShield AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>StudentShield</h2>
+                <span>AI RETENTION SYSTEM</span>
+            </div>
+        </div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="#assessment" class="nav-link">
+                <span>＋</span> Student Assessment
+            </a>
+
+            <a href="#prediction" class="nav-link">
+                <span>◈</span> Prediction Results
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>AI POWERED</p>
+            <small>Supporting student success through early intervention.</small>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Student Analytics</h1>
+                <p>Monitor academic progress and identify students needing support.</p>
+            </div>
+
+            <div class="admin">
+                <div class="avatar">A</div>
+                <span>Administrator</span>
+            </div>
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="welcome">
+                <div>
+                    <h2>Welcome to StudentShield AI</h2>
+                    <p>Early identification. Timely intervention. Better outcomes.</p>
+                </div>
+
+                <a href="#assessment" class="primary-link">
+                    + Assess Student
+                </a>
+            </div>
+
+            <h3 class="section-heading">Overview</h3>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Total Assessments</span>
+                    <h2 id="totalCount">0</h2>
+                    <small>In this session</small>
+                </div>
+
+                <div class="stat-card low">
+                    <span>Low Risk</span>
+                    <h2 id="lowCount">0</h2>
+                    <small>Predicted low risk</small>
+                </div>
+
+                <div class="stat-card medium">
+                    <span>Medium Risk</span>
+                    <h2 id="mediumCount">0</h2>
+                    <small>Needs monitoring</small>
+                </div>
+
+                <div class="stat-card high">
+                    <span>High Risk</span>
+                    <h2 id="highCount">0</h2>
+                    <small>Needs attention</small>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+                <h3>How StudentShield AI Works</h3>
+                <p>
+                    Our system uses machine learning to analyse student
+                    academic information and identify potential dropout
+                    risk. It supports teachers in planning timely
+                    academic interventions.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ASSESSMENT FORM -->
+        <section id="assessment">
+
+            <div class="section-title">
+                <h2>Student Assessment</h2>
+                <p>Enter the student's academic information below.</p>
+            </div>
+
+            <div class="form-card">
+
+                <form id="predictionForm">
+
+                    <div class="form-grid">
+
+                        <div class="field">
+                            <label for="age">Age at Enrollment</label>
+                            <input type="number" id="age" min="15" max="100"
+                                   placeholder="Example: 20" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="debtor">Debtor</label>
+                            <select id="debtor" required>
+                                <option value="">Select an option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="tuition">Tuition Fees Up to Date</label>
+                            <select id="tuition" required>
+                                <option value="">Select an option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="scholarship">Scholarship Holder</label>
+                            <select id="scholarship" required>
+                                <option value="">Select an option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="credited">1st Semester Credited Units</label>
+                            <input type="number" id="credited" min="0"
+                                   placeholder="Example: 0" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="enrolled">1st Semester Enrolled Units</label>
+                            <input type="number" id="enrolled" min="0"
+                                   placeholder="Example: 6" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="evaluations">1st Semester Evaluations</label>
+                            <input type="number" id="evaluations" min="0"
+                                   placeholder="Example: 6" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="approved">1st Semester Approved Units</label>
+                            <input type="number" id="approved" min="0"
+                                   placeholder="Example: 5" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="grade">1st Semester Grade</label>
+                            <input type="number" id="grade" min="0" max="20"
+                                   step="any" placeholder="Example: 12.5" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="without_evaluations">
+                                1st Semester Units Without Evaluations
+                            </label>
+                            <input type="number" id="without_evaluations" min="0"
+                                   placeholder="Example: 0" required>
+                        </div>
+
+                    </div>
+                    <!-- END OF FORM GRID -->
+
+
+                    <!-- FORM BUTTONS -->
+                    <div class="form-actions">
+
+                        <button type="reset" class="reset-btn">
+                            Clear Form
+                        </button>
+
+                        <button type="submit" id="predictBtn" class="predict-btn">
+                            Predict Student Risk →
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREDICTION RESULTS -->
+        <section id="prediction">
+
+            <div class="section-title">
+                <h2>Prediction Results</h2>
+                <p>Machine learning based student risk assessment.</p>
+            </div>
+
+            <div class="result-card">
+
+                <!-- EMPTY STATE -->
+                <div id="emptyState">
+                    <h2>Prediction Result</h2>
+                    <p>Submit student details to see prediction.</p>
+                </div>
+
+                <!-- RESULT CARD -->
+                <div id="resultCard" hidden>
+
+                    <h2>Prediction Result</h2>
+
+                    <div class="result-item">
+                        <p>Risk Level</p>
+                        <h3 id="riskLevel">Not available</h3>
+                    </div>
+
+                    <div class="result-item">
+                        <p>Dropout Probability</p>
+                        <h3 id="riskScore">Not available</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
